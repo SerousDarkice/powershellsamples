@@ -1,3 +1,5 @@
+# Credit to Russell Mimbs
+
 $allfiles = Get-ChildItem -Path C:\ -Recurse:$true
 
 $allfiles | Where-Object { $_.Name -like "*.csv" } | Select-Object Name,@{label=length;expression={$($this.fullname.length)}}
